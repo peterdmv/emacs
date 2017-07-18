@@ -12,12 +12,20 @@
 (require 'setup-helm)
 (require 'setup-helm-gtags)
 
+(use-package helm-tramp
+  :config
+  (setq tramp-default-method "ssh")
+  (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
+  (define-key global-map (kbd "C-c t") 'helm-tramp))
+
 (use-package helm-flycheck
 	     :defer t)
+
 (use-package flycheck
 	     :defer t
 	     :config
 	     (define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
+
 (use-package company
 	     :config
 	     (add-hook 'after-init-hook 'global-company-mode))

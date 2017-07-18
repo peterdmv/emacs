@@ -44,6 +44,7 @@
 		     helm-core
 		     helm-flycheck
 		     helm-gtags
+		     helm-tramp
 		     helm-swoop
 		     highlight-indentation
 		     intero
