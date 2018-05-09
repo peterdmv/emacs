@@ -23,6 +23,7 @@
 
 ;; Packages to be installed
 (setq package-list '(alchemist
+		     asn1-mode
 		     async
 		     company
 		     company-erlang

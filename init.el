@@ -34,12 +34,12 @@
 ;; Erlang
 (require 'setup-erlang)
 ;; C/C++
-(use-package cc-mode
-	     :defer t
-	     :config
-	     (setq company-backends (delete 'company-semantic company-backends))
-	     (define-key c-mode-map  [(tab)] 'company-complete)
-	     (define-key c++-mode-map  [(tab)] 'company-complete))
+;;(use-package cc-mode
+;;	     :defer t
+;;	     :config
+;;	     (setq company-backends (delete 'company-semantic company-backends))
+;;	     (define-key c-mode-map  [(tab)] 'company-complete)
+;;	     (define-key c++-mode-map  [(tab)] 'company-complete))
 ;; Haskell
 (use-package haskell
 	     :defer t
