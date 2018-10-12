@@ -40,6 +40,7 @@
 		     flycheck-haskell
 		     flycheck-rebar3
 		     git-commit
+		     graphviz-dot-mode
 		     haskell-mode
 		     helm
 		     helm-core
