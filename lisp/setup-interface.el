@@ -7,7 +7,7 @@
     (set-face-attribute 'default nil :height 200)
 )
 
-(set-face-attribute 'default nil :height 200)
+(set-face-attribute 'default nil :height 140)
 
 ;; Toggle window dedication
 (defun toggle-window-dedicated ()
