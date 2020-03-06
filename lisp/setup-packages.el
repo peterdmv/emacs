@@ -27,6 +27,7 @@
 		     async
 		     company
 		     company-erlang
+		     company-lsp
 		     counsel
 		     dash
 		     elixir-mode
@@ -38,7 +39,6 @@
 		     flycheck
 		     flycheck-elixir
 		     flycheck-haskell
-		     flycheck-rebar3
 		     git-commit
 		     graphviz-dot-mode
 		     haskell-mode
@@ -46,6 +46,7 @@
 		     helm-core
 		     helm-flycheck
 		     helm-gtags
+		     helm-lsp
 		     helm-tramp
 		     helm-swoop
 		     highlight-indentation
@@ -53,6 +54,9 @@
 		     ivy
 		     ivy-erlang-complete
 		     let-alist
+		     lsp-mode
+		     lsp-origami
+		     lsp-ui
 		     magit
 		     magit-popup
 		     pkg-info
