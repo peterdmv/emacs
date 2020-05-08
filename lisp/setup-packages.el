@@ -39,6 +39,7 @@
 		     flycheck
 		     flycheck-elixir
 		     flycheck-haskell
+		     gist
 		     git-commit
 		     graphviz-dot-mode
 		     haskell-mode
