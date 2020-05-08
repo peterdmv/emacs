@@ -52,3 +52,10 @@
 	     :defer t
 	     :config
 	     (elpy-enable))
+
+;; === Interface ===
+(if (display-graphic-p)
+    (load-theme 'solarized-light t)
+  (load-theme 'wheatgrass t))
+
+;; === DO NOT EDIT AFTER THIS LINE ===

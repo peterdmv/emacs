@@ -65,6 +65,7 @@
 		     pyvenv
 		     s
 		     seq
+		     solarized-theme
 		     swiper
 		     with-editor
 		     yasnippet
