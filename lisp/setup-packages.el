@@ -4,7 +4,7 @@
 (setq package-archives
   (append package-archives
     '(("melpa" . "http://melpa.org/packages/")
-      ("marmalade" . "http://marmalade-repo.org/packages/")
+      ;;("marmalade" . "http://marmalade-repo.org/packages/")
       ("gnu" . "http://elpa.gnu.org/packages/")
       ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
 (package-initialize)
@@ -17,11 +17,10 @@
 ;; Enable use-package
 (eval-when-compile
   (require 'use-package))
-;;(require 'diminish)                ;; if you use :diminish
-;;(require 'bind-key)                ;; if you use any :bind variant
-
 
 ;; Packages to be installed
+;; Note: Ivy is split into three packages: ivy, swiper and counsel;
+;; by installing counsel, the other two are brought in as dependencies.
 (setq package-list '(alchemist
 		     asn1-mode
 		     async
@@ -43,17 +42,10 @@
 		     git-commit
 		     graphviz-dot-mode
 		     haskell-mode
-		     helm
-		     helm-core
-		     helm-flycheck
-		     helm-gtags
-		     helm-lsp
-		     helm-tramp
-		     helm-swoop
 		     highlight-indentation
-		     intero
-		     ivy
 		     ivy-erlang-complete
+		     ivy-hydra
+		     ivy-omni-org
 		     let-alist
 		     lsp-mode
 		     lsp-origami
@@ -66,7 +58,7 @@
 		     s
 		     seq
 		     solarized-theme
-		     swiper
+		     which-key
 		     with-editor
 		     yasnippet
 		     ))

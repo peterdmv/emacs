@@ -3,14 +3,8 @@
   :ensure t
   :init
 
-  (setq load-path (cons (expand-file-name "~/git/otp/lib/tools/emacs")
-			load-path))
-  (setq erlang-root-dir (expand-file-name "~/git/otp"))
-  (setq exec-path (cons (expand-file-name "~/git/otp/bin")
-			exec-path))
-
-  ;;(add-hook 'erlang-mode-hook 'flycheck-mode)
-  (require 'erlang-start)
+  ;; Customize prefix for key-bindings
+  (setq lsp-keymap-prefix "C-l")
 
   ;; Enable LSP for Erlang files
   (add-hook 'erlang-mode-hook #'lsp)
@@ -20,13 +14,6 @@
 
   ;; Enable logging for lsp-mode
   (setq lsp-log-io t)
-
-  ;; Enable code completion
-  (push 'company-lsp company-backends)
-
-  ;; Override the default erlang-compile-tag to use completion-at-point
-  (eval-after-load 'erlang
-    '(define-key erlang-mode-map (kbd "C-M-i") #'company-lsp))
 
   ;; Show line and column numbers
   (add-hook 'erlang-mode-hook 'linum-mode)
@@ -46,5 +33,18 @@
   ;; - helm-lsp-global-workspace-symbol
   ;;  (package-install 'helm-lsp)
 
+  ;; Which-key integration
+  (add-hook 'erlang-mode-hook 'which-key-mode)
+  (with-eval-after-load 'lsp-mode
+    (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
+
+  ;; Always show diagnostics at the bottom, using 1/3 of the available space
+  (add-to-list 'display-buffer-alist
+               `(,(rx bos "*Flycheck errors*" eos)
+		 (display-buffer-reuse-window
+		  display-buffer-in-side-window)
+		 (side            . bottom)
+		 (reusable-frames . visible)
+		 (window-height   . 0.33)))
   )
 (provide 'setup-erlang)
